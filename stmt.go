@@ -559,8 +559,8 @@ func (st *statement) ExecContext(ctx context.Context, args []driver.NamedValue) 
 			break
 		}
 	}
-	if err != nil && (!many || !st.PartialBatch() || closeIfBadConn(err) == driver.ErrBadConn) {
-		return nil, err
+	if err != nil && (!many || !st.PartialBatch()) {
+		return nil, closeIfBadConn(err)
 	}
 
 	var batchErrors error

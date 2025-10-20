@@ -14,8 +14,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/godror/godror"
 	"github.com/prometheus/procfs"
+	"github.com/zhanbolat18/godror"
 	"gonum.org/v1/gonum/stat"
 	// "github.com/jmoiron/sqlx"
 )

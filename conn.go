@@ -31,8 +31,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/godror/godror/dsn"
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/dsn"
+	"github.com/zhanbolat18/godror/slog"
 )
 
 const getConnection = "--GET_CONNECTION--"
@@ -692,7 +692,7 @@ func calculateTZ(dbTZ, dbOSTZ string, noTZCheck bool, logger *slog.Logger) (*tim
 			if dbI, err := atoi(dbTZ); err == nil {
 				if tzI, err := atoi(dbOSTZ); err == nil && dbI != tzI &&
 					dbI+100 != tzI && tzI+100 != dbI { // Compensate for Daylight Savings
-					fmt.Fprintf(os.Stderr, "godror WARNING: discrepancy between SESSIONTIMEZONE (%q=%d) and SYSTIMESTAMP (%q=%d) - set connection timezone, see https://github.com/godror/godror/blob/master/doc/timezone.md\n", dbTZ, dbI, dbOSTZ, tzI)
+					fmt.Fprintf(os.Stderr, "godror WARNING: discrepancy between SESSIONTIMEZONE (%q=%d) and SYSTIMESTAMP (%q=%d) - set connection timezone, see https://github.com/zhanbolat18/godror/blob/master/doc/timezone.md\n", dbTZ, dbI, dbOSTZ, tzI)
 				}
 			}
 		}
@@ -1122,7 +1122,7 @@ func (c *conn) IsValid() bool {
 	//
 	//     ORA-24459: OCISessionGet()
 	//
-	// See https://github.com/godror/godror/issues/57 for example.
+	// See https://github.com/zhanbolat18/godror/issues/57 for example.
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	_ = c.closeNotLocking()

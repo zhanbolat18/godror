@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	godror "github.com/godror/godror"
+	godror "github.com/zhanbolat18/godror"
 )
 
 func compareDenseVector(t *testing.T, id godror.Number, got godror.Vector, expected godror.Vector) {

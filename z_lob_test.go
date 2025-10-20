@@ -23,9 +23,9 @@ import (
 	"unicode/utf8"
 
 	"github.com/UNO-SOFT/zlog/v2"
-	godror "github.com/godror/godror"
-	"github.com/godror/godror/dsn"
 	"github.com/google/go-cmp/cmp"
+	godror "github.com/zhanbolat18/godror"
+	"github.com/zhanbolat18/godror/dsn"
 )
 
 func TestLoadXMLLOB(t *testing.T) {

@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/slog"
 )
 
 // Number as string

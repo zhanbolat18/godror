@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	godror "github.com/godror/godror"
-	"github.com/godror/godror/dsn"
+	godror "github.com/zhanbolat18/godror"
+	"github.com/zhanbolat18/godror/dsn"
 )
 
 func TestWrongPassword(t *testing.T) {

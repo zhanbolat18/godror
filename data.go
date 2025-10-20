@@ -22,7 +22,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/slog"
 )
 
 // Data holds the data to/from Oracle.

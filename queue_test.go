@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	godror "github.com/godror/godror"
+	godror "github.com/zhanbolat18/godror"
 )
 
 type execer interface {

@@ -43,8 +43,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/godror/godror/slog"
 	"github.com/godror/knownpb/timestamppb"
+	"github.com/zhanbolat18/godror/slog"
 )
 
 const printStack = false
@@ -966,7 +966,7 @@ func (st *statement) bindVars(ctx context.Context, args []driver.NamedValue, log
 			// deref in rArgs, but NOT value!
 			rArgs[i] = rv.Elem()
 		}
-		// https://github.com/godror/godror/issues/378
+		// https://github.com/zhanbolat18/godror/issues/378
 		var isByteSlice bool
 		if rv.IsValid() && !rv.IsZero() {
 			t := rv.Type()

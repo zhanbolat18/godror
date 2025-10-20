@@ -8,7 +8,7 @@
 package godror
 
 // See https://github.com/golang/go/issues/56378
-// For pain, see https://github.com/godror/godror/issues/365 .
+// For pain, see https://github.com/zhanbolat18/godror/issues/365 .
 
 /*
 #cgo nocallback dpiConn_breakExecution

@@ -31,12 +31,12 @@ import (
 	"time"
 
 	"github.com/go-logfmt/logfmt"
-	"github.com/godror/godror/slog"
 	"github.com/google/go-cmp/cmp"
+	"github.com/zhanbolat18/godror/slog"
 	"golang.org/x/sync/errgroup"
 
-	godror "github.com/godror/godror"
-	"github.com/godror/godror/dsn"
+	godror "github.com/zhanbolat18/godror"
+	"github.com/zhanbolat18/godror/dsn"
 )
 
 var (

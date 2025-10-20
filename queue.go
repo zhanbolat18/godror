@@ -298,7 +298,7 @@ func (Q *Queue) DequeueWithOptions(messages []Message, opts *DeqOptions) (int, e
 	if num := len(messages); Q.tableName != "" && num > 1 {
 		logger := getLogger(context.TODO())
 		if err := func() error {
-			// See https://github.com/godror/godror/issues/382
+			// See https://github.com/zhanbolat18/godror/issues/382
 			qry := `SELECT ''||COUNT(0) FROM ` + Q.tableName + ` WHERE state IN (0, 1)` // READY, WAITING
 			if Q.sizeStmt == nil {
 				if stmt, err := Q.conn.PrepareContext(context.Background(), qry); err != nil {

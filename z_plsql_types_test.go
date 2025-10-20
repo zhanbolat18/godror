@@ -22,8 +22,8 @@ import (
 	"time"
 
 	"github.com/UNO-SOFT/zlog/v2"
-	godror "github.com/godror/godror"
 	"github.com/google/go-cmp/cmp"
+	godror "github.com/zhanbolat18/godror"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -1224,7 +1224,7 @@ END;`
 	})
 }
 
-// See https://github.com/godror/godror/issues/179
+// See https://github.com/zhanbolat18/godror/issues/179
 func TestObjectTypeClose(t *testing.T) {
 	ctx, cancel := context.WithTimeout(testContext("ObjectTypeClose"), 30*time.Second)
 	defer cancel()
@@ -1276,7 +1276,7 @@ func TestObjectTypeClose(t *testing.T) {
 	}
 }
 
-// See https://github.com/godror/godror/issues/180
+// See https://github.com/zhanbolat18/godror/issues/180
 func TestSubObjectTypeClose(t *testing.T) {
 	ctx, cancel := context.WithTimeout(testContext("SubObjectTypeClose"), 30*time.Second)
 	defer cancel()

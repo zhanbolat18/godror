@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	godror "github.com/godror/godror"
 	"github.com/google/go-cmp/cmp"
+	godror "github.com/zhanbolat18/godror"
 )
 
 func TestMapToSlice(t *testing.T) {

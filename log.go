@@ -9,7 +9,7 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/slog"
 )
 
 var globalLogger atomic.Value

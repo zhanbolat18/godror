@@ -1,6 +1,6 @@
 module github.com/godror/testdata/benchmem
 
-go 1.19
+go 1.23.0
 
 require (
 	github.com/godror/godror v0.40.1
@@ -10,10 +10,10 @@ require (
 
 require (
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
-	github.com/godror/knownpb v0.1.1 // indirect
-	golang.org/x/exp v0.0.0-20230817173708-d852ddb80c63 // indirect
-	golang.org/x/sys v0.11.0 // indirect
-	google.golang.org/protobuf v1.30.0 // indirect
+	github.com/godror/knownpb v0.3.0 // indirect
+	golang.org/x/exp v0.0.0-20250506013437-ce4c2cf36ca6 // indirect
+	golang.org/x/sys v0.22.0 // indirect
+	google.golang.org/protobuf v1.36.6 // indirect
 )
 
 replace github.com/godror/godror => ../../

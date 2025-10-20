@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	godror "github.com/godror/godror"
-	"github.com/godror/godror/dsn"
+	godror "github.com/zhanbolat18/godror"
+	"github.com/zhanbolat18/godror/dsn"
 )
 
 // Checks if Token is configured. PrivateKey is only for IAM, hence

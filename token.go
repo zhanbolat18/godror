@@ -19,8 +19,8 @@ import (
 	"runtime/cgo"
 	"unsafe"
 
-	"github.com/godror/godror/dsn"
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/dsn"
+	"github.com/zhanbolat18/godror/slog"
 )
 
 // AccessToken Callback information.

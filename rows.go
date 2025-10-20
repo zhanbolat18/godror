@@ -21,7 +21,7 @@ import (
 	"context"
 	"database/sql/driver"
 	"fmt"
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/slog"
 	"io"
 	"math"
 	"reflect"
@@ -304,7 +304,7 @@ func (r *rows) Next(dest []driver.Value) error {
 	defer runtime.UnlockOSThread()
 
 	if r.fetched == 0 {
-		// Start the watchdog only once See issue #113 (https://github.com/godror/godror/issues/113)
+		// Start the watchdog only once See issue #113 (https://github.com/zhanbolat18/godror/issues/113)
 		if ctx := r.statement.ctx; ctx != nil {
 			// nil can be present when Next is issued on cursor returned from DB
 			if r.err = ctx.Err(); r.err != nil {

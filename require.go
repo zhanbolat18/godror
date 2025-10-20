@@ -8,7 +8,7 @@
 package godror
 
 import (
-	_ "github.com/godror/godror/odpi/embed"   // ODPI-C
-	_ "github.com/godror/godror/odpi/include" // ODPI-C
-	_ "github.com/godror/godror/odpi/src"     // ODPI-C
+	_ "github.com/zhanbolat18/godror/odpi/embed"   // ODPI-C
+	_ "github.com/zhanbolat18/godror/odpi/include" // ODPI-C
+	_ "github.com/zhanbolat18/godror/odpi/src"     // ODPI-C
 )

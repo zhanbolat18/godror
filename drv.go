@@ -82,7 +82,7 @@ import (
 	"database/sql/driver"
 	"errors"
 	"fmt"
-	"github.com/godror/godror/slog"
+	"github.com/zhanbolat18/godror/slog"
 	"io"
 	"math"
 	"runtime"
@@ -93,7 +93,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/godror/godror/dsn"
+	"github.com/zhanbolat18/godror/dsn"
 )
 
 const (
@@ -711,7 +711,7 @@ func (d *drv) acquireConn(pool *connPool, P commonAndConnParams) (*C.dpiConn, bo
 		if pool != nil {
 			if connCreateParams.numShardingKeyColumns != 0 {
 				var ec interface{ Code() int }
-				if errors.As(err, &ec) && ec.Code() == 24459 { //  https://github.com/godror/godror/issues/379#issuecomment-3107438057
+				if errors.As(err, &ec) && ec.Code() == 24459 { //  https://github.com/zhanbolat18/godror/issues/379#issuecomment-3107438057
 					return nil, false, nil, fmt.Errorf("sharding=%+v for pooled connection failed: %w", P.ShardingKey, err)
 				}
 			}

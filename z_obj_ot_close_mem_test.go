@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/godror/godror"
+	"github.com/zhanbolat18/godror"
 )
 
 func TestObjOpenClose(t *testing.T) {

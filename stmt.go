@@ -512,6 +512,9 @@ func (st *statement) ExecContext(ctx context.Context, args []driver.NamedValue) 
 	// execute
 	var f func() C.int
 	many := !st.PlSQLArrays() && st.arrLen > 0
+	if logger != nil && logger.Enabled(ctx, slog.LevelDebug) {
+		logger.Debug("dpiStmt_execute_check_many", "many", many)
+	}
 	if many {
 		if st.PartialBatch() {
 			mode |= C.DPI_MODE_EXEC_BATCH_ERRORS
@@ -568,7 +571,7 @@ func (st *statement) ExecContext(ctx context.Context, args []driver.NamedValue) 
 		return nil, closeIfBadConn(err)
 	}
 
-	var batchErrors error
+	var batchErrors error = nil
 	if many {
 		if batchErrors = func() error {
 			var errInfos []C.dpiErrorInfo
@@ -611,7 +614,9 @@ func (st *statement) ExecContext(ctx context.Context, args []driver.NamedValue) 
 			batchErrors = err
 		}
 	}
-
+	if logger != nil && logger.Enabled(ctx, slog.LevelDebug) {
+		logger.Debug("dpiStmt_execute_BATCH_ERRORS", "batcherror", batchErrors)
+	}
 	if logger != nil && logger.Enabled(ctx, slog.LevelDebug) {
 		logger.Debug("get/set", "gets", st.gets, "dests", st.dests)
 	}
@@ -666,6 +671,9 @@ func (st *statement) ExecContext(ctx context.Context, args []driver.NamedValue) 
 			logger.Error("getRowCount", "error", err)
 		}
 		return nil, batchErrors
+	}
+	if logger != nil && logger.Enabled(ctx, slog.LevelDebug) {
+		logger.Debug("dpiStmt_execute_BATCH_ERRORS_BEFORE_RETURN", "batcherror", batchErrors)
 	}
 	return driver.RowsAffected(count), batchErrors
 }

@@ -559,9 +559,9 @@ func (st *statement) ExecContext(ctx context.Context, args []driver.NamedValue) 
 			break
 		}
 	}
-	if err != nil && (!many || !st.PartialBatch()) {
+	if err != nil {
 		if logger != nil && logger.Enabled(ctx, slog.LevelDebug) {
-			logger.Debug("dpiStmt_execute", "st",
+			logger.Debug("dpiStmt_execute_err_checker", "st",
 				fmt.Sprintf("%p", st.dpiStmt), "many", many, "mode", mode, "len", st.arrLen, "err", err,
 			)
 		}
